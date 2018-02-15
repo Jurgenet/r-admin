@@ -1,29 +1,28 @@
-# R-Admin
+# r-admin
 > react admin panel powered by CoreUI v1.0.10 
 
 ## Intro 
 
 It uses Sass (with .scss). The style is loaded at the component level.
 
-Dependencies can be handled by **npm**.
-
 ## Usage
 
-**npm i** - to install dependencies
+**yarn** - to install dependencies
 
-## NPM Script Commands
+## Yarn Script Commands
 
-| `NPM run <script>` | Description                                             |
-| ------------------ | ------------------------------------------------------- |
-| `npm start`        | for developing (it runs webpack-dev-server)             |
-| `npm run build`    | to run a dev build                                      |
-| `npm run clean`    | to clean build dir                                      |
-| `npm run dev`      | to run a dev build with watching filesystem for changes |
+| `Yarn run <script>` | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| `yarn start`        | for developing (it runs webpack-dev-server)             |
+| `yarn build`        | to run a dev build                                      |
+| `yarn clean`        | to clean build dir                                      |
+| `yarn dev`          | to run a dev build with watching filesystem for changes |
 
 ## App Structure
 
 ```
 .
+├── node_modules/**               # node_modules
 ├── public                        # public source
 |   ├── img                       # images
 |   |    └── avatars              # avatars
@@ -36,13 +35,21 @@ Dependencies can be handled by **npm**.
 |   ├── _core-variables.scss      # core overrides
 |   ├── _custom.scss              # other styles
 |   └── style.scss                # main style
-└── src                           # app source code (js|jsx source)
-    ├── components                # reusable components (including styled/scss/testing files)
-    ├── config                    # app configuration settings
-    |   └── default.js            # default settings
-    ├── containers                # container components (including styled/scss/testing files)
-    ├── views                     # views
-    └── index.js                  # app entry point
+├── src                           # app source code (js|jsx source)
+|   ├── components                # reusable components (including styled/scss/testing files)
+|   ├── config                    # app configuration settings
+|   |   └── default.js            # default settings
+|   ├── containers                # container components (including styled/scss/testing files)
+|   ├── views                     # views
+|   └── index.js                  # app entry point
+├── .babelrc                      # babel settings
+├── .gitignore                    # git ignore settings
+├── .npmrc                        # npm settings
+├── LICENSE                       # license file
+├── package.json                  # package.json
+├── README.md                     # README file
+├── webpack.config.js             # webpack settings
+└── yarn.lock                     # yarn lock file
 ```
 
 ## See Also
@@ -50,6 +57,7 @@ Dependencies can be handled by **npm**.
 
 ## Todo...
 
+* [x] Change 💩npm to yarn.
 * [ ] Add styled-components.
 * [ ] Add flow.
 * [ ] Add prettier.
