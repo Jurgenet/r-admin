@@ -5,9 +5,13 @@
 
 It uses Sass (with .scss). The style is loaded at the component level.
 
-## Usage
+## Features
 
-**yarn** - to install dependencies
+## Usage
+```sh
+# install dependencies
+yarn
+```
 
 ## Yarn Script Commands
 
@@ -18,11 +22,13 @@ It uses Sass (with .scss). The style is loaded at the component level.
 | `yarn clean`        | to clean build dir                                      |
 | `yarn dev`          | to run a dev build with watching filesystem for changes |
 | `yarn pretty`       | to run Prettier                                         |
+| `yarn flow`         | to run Flow checker                                     |
 
 ## App Structure
 
 ```
 .
+├── flow-typed/**                 # external lib types             
 ├── node_modules/**               # node_modules
 ├── public                        # public source
 |   ├── img                       # images
@@ -44,6 +50,7 @@ It uses Sass (with .scss). The style is loaded at the component level.
 |   ├── views                     # views
 |   └── index.js                  # app entry point
 ├── .babelrc                      # babel settings
+├── .flowconfig                   # flow settings
 ├── .gitignore                    # git ignore settings
 ├── .npmrc                        # npm settings
 ├── .prettierignore               # prettier ignore path
@@ -55,6 +62,14 @@ It uses Sass (with .scss). The style is loaded at the component level.
 └── yarn.lock                     # yarn lock file
 ```
 
+## Used by
+
+* [prettier](https://github.com/prettier/prettier)
+* [husky](https://github.com/typicode/husky)
+* [lint-staged](https://github.com/okonet/lint-staged)
+* [flow](https://flow.org)
+* ... and little more
+
 ## See Also
 [CoreUI - Free Bootstrap Admin Template](https://github.com/mrholek/CoreUI-React)
 
@@ -62,7 +77,7 @@ It uses Sass (with .scss). The style is loaded at the component level.
 
 * [x] Change 💩npm to yarn.
 * [x] Add prettier/hasky/lint-staged.
-* [ ] Add flow.
+* [x] Add flow.
 * [ ] Add styled-components.
 * [ ] Add jest/ensyme.
 * [ ] Add authorization.
