@@ -16,14 +16,17 @@ yarn
 
 ## Yarn Script Commands
 
-| `Yarn run <script>` | Description                                             |
-| ------------------- | ------------------------------------------------------- |
-| `yarn start`        | for developing (it runs webpack-dev-server)             |
-| `yarn build`        | to run a dev build                                      |
-| `yarn clean`        | to clean build dir                                      |
-| `yarn dev`          | to run a dev build with watching filesystem for changes |
-| `yarn pretty`       | to run Prettier                                         |
-| `yarn flow`         | to run Flow checker                                     |
+| `Yarn run <script>`  | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| `yarn start`         | for developing (it runs webpack-dev-server)             |
+| `yarn build`         | to run a dev build                                      |
+| `yarn clean`         | to clean build dir                                      |
+| `yarn dev`           | to run a dev build with watching filesystem for changes |
+| `yarn pretty`        | to run Prettier                                         |
+| `yarn flow`          | to run Flow checker                                     |
+| `yarn test           | to run jest/enzyme test                                 |
+| `yarn test:watch`    | to run jest watching tests                              |
+| `yarn test:coverage` | to run jest coverage                                    |
 
 ## App Structure
 
@@ -50,6 +53,9 @@ yarn
 |   ├── containers                # container components (including styled/scss/testing files)
 |   ├── views                     # views
 |   └── index.js                  # app entry point
+├── tests                         # tests
+|   ├── __snapshots__             # enzyme snapshots
+|   └── jetssetup.js              # jest-enzyme setup settings
 ├── .babelrc                      # babel settings
 ├── .flowconfig                   # flow settings
 ├── .gitignore                    # git ignore settings
@@ -70,6 +76,8 @@ yarn
 * [lint-staged](https://github.com/okonet/lint-staged)
 * [flow](https://flow.org)
 * [styled-components](https://github.com/styled-components/styled-components)
+* [jest](https://facebook.github.io/jest/)
+* [enzyme](https://github.com/airbnb/enzyme)
 * ... and little more
 
 ## See Also
@@ -81,7 +89,7 @@ yarn
 * [x] Add prettier/hasky/lint-staged.
 * [x] Add flow.
 * [x] Add styled-components.
-* [ ] Add jest/ensyme.
+* [x] Add jest/enzyme.
 * [ ] Add authorization.
 
 ## License
