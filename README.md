@@ -55,3 +55,7 @@ Dependencies can be handled by **npm**.
 * [ ] Add prettier.
 * [ ] Add jest/ensyme.
 * [ ] Add authorization.
+
+## License
+
+:cactus: MIT :cactus:
