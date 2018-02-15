@@ -17,6 +17,7 @@ It uses Sass (with .scss). The style is loaded at the component level.
 | `yarn build`        | to run a dev build                                      |
 | `yarn clean`        | to clean build dir                                      |
 | `yarn dev`          | to run a dev build with watching filesystem for changes |
+| `yarn pretty`       | to run Prettier                                         |
 
 ## App Structure
 
@@ -45,6 +46,8 @@ It uses Sass (with .scss). The style is loaded at the component level.
 ├── .babelrc                      # babel settings
 ├── .gitignore                    # git ignore settings
 ├── .npmrc                        # npm settings
+├── .prettierignore               # prettier ignore path
+├── .prettierrc                   # prettier rules
 ├── LICENSE                       # license file
 ├── package.json                  # package.json
 ├── README.md                     # README file
@@ -58,9 +61,9 @@ It uses Sass (with .scss). The style is loaded at the component level.
 ## Todo...
 
 * [x] Change 💩npm to yarn.
-* [ ] Add styled-components.
+* [x] Add prettier/hasky/lint-staged.
 * [ ] Add flow.
-* [ ] Add prettier.
+* [ ] Add styled-components.
 * [ ] Add jest/ensyme.
 * [ ] Add authorization.
 
