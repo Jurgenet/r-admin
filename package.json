@@ -39,6 +39,7 @@
     "sass-loader": "6.0.6",
     "source-list-map": "2.0.0",
     "style-loader": "0.20.1",
+    "styled-components": "^3.1.6",
     "uglify-js": "3.3.9",
     "url-loader": "0.6.2",
     "webpack": "3.10.0",

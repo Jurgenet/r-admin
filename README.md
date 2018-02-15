@@ -1,4 +1,5 @@
-# r-admin
+<!-- prettier-ignore -->
+# r-admin [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 > react admin panel powered by CoreUI v1.0.10 
 
 ## Intro 
@@ -68,6 +69,7 @@ yarn
 * [husky](https://github.com/typicode/husky)
 * [lint-staged](https://github.com/okonet/lint-staged)
 * [flow](https://flow.org)
+* [styled-components](https://github.com/styled-components/styled-components)
 * ... and little more
 
 ## See Also
@@ -78,7 +80,7 @@ yarn
 * [x] Change 💩npm to yarn.
 * [x] Add prettier/hasky/lint-staged.
 * [x] Add flow.
-* [ ] Add styled-components.
+* [x] Add styled-components.
 * [ ] Add jest/ensyme.
 * [ ] Add authorization.
 
