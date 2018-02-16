@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import routes from '../../config/routes';
-
 import SidebarHeader from './../SidebarHeader';
 import SidebarFooter from './../SidebarFooter';
 import SidebarNavigation from './../SidebarNavigation';
@@ -40,12 +38,14 @@ class Sidebar extends Component {
   // }
 
   render() {
+    const { navigation, ...props } = this.props;
+
     // sidebar-nav root
     return (
       <div className="sidebar">
         <SidebarHeader />
         <SidebarForm />
-        <SidebarNavigation routes={routes} {...this.props} />
+        <SidebarNavigation navigation={navigation} />
         <SidebarFooter />
         <SidebarMinimizer />
       </div>

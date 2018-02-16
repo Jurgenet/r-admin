@@ -4,6 +4,9 @@ import { Container } from 'reactstrap';
 
 import { AppWrapper, AppBody } from './styled';
 
+import routes from '../../config/routes';
+import navigation from '../../config/navigation';
+
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 import Breadcrumb from '../../components/Breadcrumb/';
@@ -20,9 +23,9 @@ class App extends React.Component {
         <Header />
 
         <AppBody className={'app-body'}>
-          <Sidebar {...this.props} />
+          <Sidebar navigation={navigation} {...this.props} />
           <main className={'main'}>
-            <Breadcrumb />
+            <Breadcrumb routes={routes} />
             <Container fluid>
               <Switch>
                 <Route path="/dashboard" name="Dashboard" component={Dashboard} />

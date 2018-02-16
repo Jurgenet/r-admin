@@ -114,7 +114,7 @@ class SidebarNavigation extends React.Component {
 
     return (
       <nav className="sidebar-nav">
-        <Nav>{navList(this.props.routes.items)}</Nav>
+        <Nav>{navList(this.props.navigation)}</Nav>
       </nav>
     );
   }
