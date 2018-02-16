@@ -16,11 +16,11 @@ console.log('SRC_DIR', SRC_DIR);
 module.exports = (env = {}) => {
   return {
     entry: {
-      index: [SRC_DIR + '/index.js']
+      index: [SRC_DIR + '/index.js'],
     },
     output: {
       path: BUILD_DIR,
-      filename: '[name].bundle.js'
+      filename: '[name].bundle.js',
     },
     // watch: true,
     devtool: env.prod ? 'source-map' : 'cheap-module-eval-source-map',
@@ -29,7 +29,7 @@ module.exports = (env = {}) => {
       //   port: 9001,
       compress: true,
       hot: true,
-      open: true
+      open: true,
     },
     module: {
       rules: [
@@ -40,35 +40,38 @@ module.exports = (env = {}) => {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
-              presets: ['react', 'env']
-            }
-          }
+              presets: ['react', 'env', 'flow'],
+              plugins: ['transform-class-properties', 'transform-object-rest-spread'],
+            },
+          },
         },
         {
           test: /\.html$/,
-          loader: 'html-loader'
+          loader: 'html-loader',
         },
         {
           test: /\.(scss)$/,
-          use: ['css-hot-loader'].concat(extractSCSS.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {alias: {'../img': '../public/img'}}
-              },
-              {
-                loader: 'sass-loader'
-              }
-            ]
-          }))
+          use: ['css-hot-loader'].concat(
+            extractSCSS.extract({
+              fallback: 'style-loader',
+              use: [
+                {
+                  loader: 'css-loader',
+                  options: { alias: { '../img': '../public/img' } },
+                },
+                {
+                  loader: 'sass-loader',
+                },
+              ],
+            })
+          ),
         },
         {
           test: /\.css$/,
           use: extractCSS.extract({
             fallback: 'style-loader',
-            use: 'css-loader'
-          })
+            use: 'css-loader',
+          }),
         },
         {
           test: /\.(png|jpg|jpeg|gif|ico)$/,
@@ -77,36 +80,31 @@ module.exports = (env = {}) => {
               // loader: 'url-loader'
               loader: 'file-loader',
               options: {
-                name: './img/[name].[hash].[ext]'
-              }
-            }
-          ]
+                name: './img/[name].[hash].[ext]',
+              },
+            },
+          ],
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
           loader: 'file-loader',
           options: {
-            name: './fonts/[name].[hash].[ext]'
-          }
-        }]
+            name: './fonts/[name].[hash].[ext]',
+          },
+        },
+      ],
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
+      new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
       new webpack.NamedModulesPlugin(),
       extractCSS,
       extractSCSS,
-      new HtmlWebpackPlugin(
-        {
-          inject: true,
-          template: './public/index.html'
-        }
-      ),
-      new CopyWebpackPlugin([
-          {from: './public/img', to: 'img'}
-        ],
-        {copyUnmodified: false}
-      )
-    ]
-  }
+      new HtmlWebpackPlugin({
+        inject: true,
+        template: './public/index.html',
+      }),
+      new CopyWebpackPlugin([{ from: './public/img', to: 'img' }], { copyUnmodified: false }),
+    ],
+  };
 };
