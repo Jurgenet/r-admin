@@ -4,7 +4,7 @@
     "start": "webpack-dev-server --progress --color --inline --env.dev",
     "build": "webpack -p --progress --env.prod",
     "clean": "rimraf ./build",
-    "flow": "flow check",
+    "flow": "flow focus-check",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
