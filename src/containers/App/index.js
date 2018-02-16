@@ -1,25 +1,39 @@
 import React from 'react';
 import { Link, Switch, Route, Redirect } from 'react-router-dom';
+import { Container } from 'reactstrap';
 
-import styled from 'styled-components';
+import { AppWrapper, AppBody } from './styled';
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
+import Breadcrumb from '../../components/Breadcrumb/';
+// import Aside from '../../components/Aside/';
+// import Footer from '../../components/Footer/';
 
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
+import Dashboard from '../../views/Dashboard/';
+import Tableset from '../../views/Tableset/';
 
 class App extends React.Component {
   render() {
     return (
-      <Wrapper>
-        <Title>React Admin Panel</Title>
-      </Wrapper>
+      <AppWrapper className={'app'}>
+        <Header />
+
+        <AppBody className={'app-body'}>
+          <Sidebar {...this.props} />
+          <main className={'main'}>
+            <Breadcrumb />
+            <Container fluid>
+              <Switch>
+                <Route path="/dashboard" name="Dashboard" component={Dashboard} />
+                <Route path="/tableset" name="Tableset" component={Tableset} />
+                <Redirect from="/" to="/dashboard" />
+              </Switch>
+            </Container>
+          </main>
+        </AppBody>
+        {/*<Footer />*/}
+      </AppWrapper>
     );
   }
 }
