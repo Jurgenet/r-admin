@@ -91,7 +91,7 @@ yarn
 * [x] Add styled-components.
 * [x] Add jest/enzyme.
 * [x] Add babel/transform-class-properties. 
-* [ ] Add basic sidebar functionality 
+* [ ] Add basic navigation functionality 
 * [ ] Adapt to real react statefull components. 💡 
 * [ ] 🏁 v0.0.2 profit 🏁
 * [ ] Add authorization.
