@@ -24,7 +24,7 @@ yarn
 | `yarn dev`           | to run a dev build with watching filesystem for changes |
 | `yarn pretty`        | to run Prettier                                         |
 | `yarn flow`          | to run Flow checker                                     |
-| `yarn test           | to run jest/enzyme test                                 |
+| `yarn test`          | to run jest/enzyme test                                 |
 | `yarn test:watch`    | to run jest watching tests                              |
 | `yarn test:coverage` | to run jest coverage                                    |
 
