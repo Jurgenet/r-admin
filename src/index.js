@@ -14,13 +14,15 @@ import '../scss/style.scss';
 // Temp fix for reactstrap
 import '../scss/core/_dropdown-menu-right.scss';
 
-// Containers
-import App from './containers/App';
+// Views
+import App from './views/App';
+import Login from './views/Login';
 
 ReactDOM.render(
   <HashRouter>
     <Switch>
-      <Route path="/" name="Home" component={App} />
+      <Route exact path="/" name="Home" component={App} />
+      <Route exact path="/login" component={Login} />
     </Switch>
   </HashRouter>,
   document.getElementById('root')

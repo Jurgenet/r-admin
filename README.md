@@ -91,10 +91,12 @@ yarn
 * [x] Add styled-components.
 * [x] Add jest/enzyme.
 * [x] Add babel/transform-class-properties. 
-* [x] Add basic navigation functionality 
-* [ ] Adapt to real react statefull components. 💡 
+* [x] Add basic navigation functionality.
+* [x] Add Login Page View.
+* [x] Follow BEM principles. 
+* [ ] Add authorization. 
 * [ ] 🏁 v0.0.2 profit 🏁
-* [ ] Add authorization.
+* [ ] Adapt to real react statefull components. 💡
 * [ ] 🏁 v0.0.3 profit 🏁
 
 

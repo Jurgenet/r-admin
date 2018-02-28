@@ -13,8 +13,8 @@ import Breadcrumb from '../../components/Breadcrumb/';
 // import Aside from '../../components/Aside/';
 // import Footer from '../../components/Footer/';
 
-import Dashboard from '../../views/Dashboard/';
-import Tableset from '../../views/Tableset/';
+import Dashboard from '../../containers/Dashboard/';
+import Tableset from '../../containers/Tableset/';
 
 class App extends React.Component {
   render() {
@@ -28,9 +28,10 @@ class App extends React.Component {
             <Breadcrumb routes={routes} />
             <Container fluid>
               <Switch>
-                <Route path="/dashboard" name="Dashboard" component={Dashboard} />
-                <Route path="/tableset" name="Tableset" component={Tableset} />
-                <Redirect from="/" to="/dashboard" />
+                <Route exact path="/dashboard" name="Dashboard" component={Dashboard} />
+                <Route exact path="/tableset" name="Tableset" component={Tableset} />
+
+                {/* <Redirect from="/" to="/dashboard" /> */}
               </Switch>
             </Container>
           </main>
