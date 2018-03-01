@@ -17,7 +17,6 @@ class Sidebar extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    debugger;
     e.target.parentElement.classList.toggle('open');
   }
 

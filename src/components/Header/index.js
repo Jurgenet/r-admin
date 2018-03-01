@@ -15,12 +15,19 @@ class Header extends React.Component {
         <NavbarToggler className="d-md-down-none mr-auto" onClick={this.sidebarToggle}>
           <span className="navbar-toggler-icon" />
         </NavbarToggler>
+        <div className={'logout'} onClick={this.onLogoutHandler}>
+          Logout
+        </div>
         <NavbarToggler className="d-md-down-none" onClick={this.asideToggle}>
           <span className="navbar-toggler-icon" />
         </NavbarToggler>
       </header>
     );
   }
+
+  onLogoutHandler = e => {
+    this.props.onLogoutHandler();
+  };
 
   sidebarToggle(e) {
     e.preventDefault();

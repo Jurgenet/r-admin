@@ -21,8 +21,8 @@ import Login from './views/Login';
 ReactDOM.render(
   <HashRouter>
     <Switch>
-      <Route exact path="/" name="Home" component={App} />
-      <Route exact path="/login" component={Login} />
+      <Route path="/login" component={Login} />
+      <Route path="/" name="Home" component={App} />
     </Switch>
   </HashRouter>,
   document.getElementById('root')
