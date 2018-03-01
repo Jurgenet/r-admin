@@ -51,7 +51,8 @@ yarn
 |   ├── config                    # app configuration settings
 |   |   └── default.js            # default settings
 |   ├── containers                # container components (including styled/scss/testing files)
-|   ├── views                     # views
+|   ├── services                  # services
+|   ├── views                     # views (pages)
 |   └── index.js                  # app entry point
 ├── tests                         # tests
 |   ├── __snapshots__             # enzyme snapshots
@@ -71,6 +72,7 @@ yarn
 
 ## Used by
 
+* [babel](https://github.com/babel/babel) (ES6, ES7 (class-properties, object-rest-spread), async/await)
 * [prettier](https://github.com/prettier/prettier)
 * [husky](https://github.com/typicode/husky)
 * [lint-staged](https://github.com/okonet/lint-staged)
@@ -78,6 +80,7 @@ yarn
 * [styled-components](https://github.com/styled-components/styled-components)
 * [jest](https://facebook.github.io/jest/)
 * [enzyme](https://github.com/airbnb/enzyme)
+* [axios](https://github.com/axios/axios) + [apisauce](https://github.com/infinitered/apisauce) + [jwt-decode](https://github.com/auth0/jwt-decode)
 * ... and little more
 
 ## See Also
@@ -94,6 +97,7 @@ yarn
 * [x] Add basic navigation functionality.
 * [x] Add Login Page View.
 * [x] Follow BEM principles. 
+* [x] Add async/await tools. 
 * [ ] Add authorization. 
 * [ ] 🏁 v0.0.2 profit 🏁
 * [ ] Adapt to real react statefull components. 💡

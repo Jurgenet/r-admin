@@ -41,7 +41,17 @@ module.exports = (env = {}) => {
             options: {
               cacheDirectory: true,
               presets: ['react', 'env', 'flow'],
-              plugins: ['transform-class-properties', 'transform-object-rest-spread'],
+              plugins: [
+                'transform-class-properties',
+                'transform-object-rest-spread',
+                [
+                  'transform-runtime',
+                  {
+                    polyfill: false,
+                    regenerator: true,
+                  },
+                ],
+              ],
             },
           },
         },

@@ -15,5 +15,6 @@ build
 Thumbs.db
 .env
 .idea
+yarn-error.log
 npm-debug.log
 compilation-stats.json
