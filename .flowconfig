@@ -3,7 +3,7 @@
 public
 
 [include]
-src/.*
+./src/.*
 
 [libs]
 flow-typed
